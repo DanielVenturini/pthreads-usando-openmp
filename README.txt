@@ -4,12 +4,14 @@
 
 Implementação de região paralela para resolver o problema de soma de vetor usando threads. Foi usado o OpenMP - uma interface para a programação multi-processo de memória compartilhada em múltiplas plataformas - para substituir a utilização do LPthreads.
 
+Usando algumas funções da biblioteca math.h, então por isso se passa no parametro o "-lm".
+
 compile:
 	
 	dinamico
-	gcc -lpthread vectoradd-openmp-dinamico.c -o vectoradd-openmp-dinamico
+	gcc -fopenmp vectoradd-openmp-dinamico.c -o vectoradd-openmp-dinamico -lm
 
-	gcc -lpthread vectoradd-openmp-estatico.c -o vectoradd-openmp-estatico
+	gcc -fopenmp vectoradd-openmp-estatico.c -o vectoradd-openmp-estatico -lm
 
 run:
 
